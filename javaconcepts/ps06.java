@@ -64,7 +64,7 @@ public class ps06 {
 
         // Practice Problem 5
 
-        int [] arr = {1, 21, 3, 4, 5, 34, 67};
+        /* int [] arr = {1, 21, 3, 4, 5, 34, 67};
         int l = arr.length;
         int n = Math.floorDiv(l, 2);
         int temp;
@@ -80,8 +80,17 @@ public class ps06 {
 
         for(int element: arr){
             System.out.print(element + " ");
+        } */
+
+        // Practice Problem 6
+
+        int [] arr = {1, 2100, 3, 455, 5, 34, 67};
+        int max = Integer.MIN_VALUE;
+        for(int e: arr){
+            if(e>max){
+                max = e;
+            }
         }
-
-
+        System.out.println("the value of the maximum element in this array is: "+ max);
     }
 }
