@@ -16,6 +16,13 @@ public class practice_set_on_methods {
         }
     }
 
+    static int sumRec(int n) {
+        // Base condition
+        if (n == 1) {
+            return 1;
+        }
+        return n + sumRec(n - 1);
+    }
 
 
 
@@ -26,9 +33,11 @@ public class practice_set_on_methods {
 //        multiplication(7);
 
         // Problem 2
-        pattern1(9);
+//        pattern1(9);
 
-
+        // Problem 3
+         int c = sumRec(4);
+         System.out.println(c);
 
 
     }
