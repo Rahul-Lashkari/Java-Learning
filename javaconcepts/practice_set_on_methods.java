@@ -24,6 +24,19 @@ public class practice_set_on_methods {
         return n + sumRec(n - 1);
     }
 
+    static int fib(int n) {
+        /* if(n==1){
+            return 0;
+        }
+        else if(n==2){
+            return 1;
+        } */
+        if (n == 1 || n == 2) {
+            return n - 1;
+        } else {
+            return fib(n - 1) + fib(n - 2);
+        }
+    }
 
 
 
@@ -36,8 +49,13 @@ public class practice_set_on_methods {
 //        pattern1(9);
 
         // Problem 3
-         int c = sumRec(4);
-         System.out.println(c);
+//         int c = sumRec(4);
+//         System.out.println(c);
+
+         // Problem 4
+//         fibonacci series - 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+         int result = fib(7);
+         System.out.println(result);
 
 
     }
