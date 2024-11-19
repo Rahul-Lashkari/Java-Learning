@@ -37,6 +37,18 @@ class Square{
     }
 }
 
+class Tommy{
+    public void hit(){
+        System.out.println("Hitting the enemy");
+    }
+    public void run(){
+        System.out.println("Running from the enemy");
+    }
+    public void fire(){
+        System.out.println("Firing on the enemy");
+    }
+}
+
 public class practice_set_on_OOP {
     public static void main(String[] args) {
 /*
@@ -47,19 +59,22 @@ public class practice_set_on_OOP {
         System.out.println(Joe.getSalary());
         System.out.println(Joe.getName());
 
-
         // Problem 2
         CellPhone asus = new CellPhone();
         asus.callFriend();
         asus.vibrate();
         asus.ring();
 
-*/
         // Problem 3
         Square sq = new Square();
         sq.side = 3;
         System.out.println(sq.area());
         System.out.println(sq.perimeter());
-
+*/
+        // Problem 4
+        Tommy player1 = new Tommy();
+        player1.fire();
+        player1.run();
+        player1.hit();
     }
 }
