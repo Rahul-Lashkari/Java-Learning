@@ -25,7 +25,16 @@ class CellPhone{
     public void callFriend(){
         System.out.println("Calling Stacy...");
     }
+}
 
+class Square{
+    int side;
+    public int area(){
+        return side*side;
+    }
+    public int perimeter(){
+        return 4*side;
+    }
 }
 
 public class practice_set_on_OOP {
@@ -38,13 +47,19 @@ public class practice_set_on_OOP {
         System.out.println(Joe.getSalary());
         System.out.println(Joe.getName());
 
- */
+
         // Problem 2
         CellPhone asus = new CellPhone();
         asus.callFriend();
         asus.vibrate();
         asus.ring();
 
+*/
+        // Problem 3
+        Square sq = new Square();
+        sq.side = 3;
+        System.out.println(sq.area());
+        System.out.println(sq.perimeter());
 
     }
 }
