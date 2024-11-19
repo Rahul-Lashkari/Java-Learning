@@ -1,6 +1,6 @@
 package javaconcepts;
 
-class Employee{
+class Employee1{
     int id;
     int salary;
     String name;
@@ -17,8 +17,8 @@ class Employee{
 public class custom_class {
     public static void main(String[] args) {
         System.out.println("This is our custom class");
-        Employee Sasha = new Employee();   // Instantiating a new Employee Object
-        Employee Nicole = new Employee();  // Instantiating a new Employee Object
+        Employee1 Sasha = new Employee1();   // Instantiating a new Employee Object
+        Employee1 Nicole = new Employee1();  // Instantiating a new Employee Object
 
         // Setting Attributes for Sasha
         Sasha.id = 11;
