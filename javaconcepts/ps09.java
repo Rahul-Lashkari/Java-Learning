@@ -34,6 +34,29 @@ class Cylinder{
     }
 }
 
+class Rectangle{
+    private int length;
+    private int breadth;
+
+    public Rectangle() {
+        this.length = 4;
+        this.breadth = 5;
+    }
+
+    public Rectangle(int length, int breadth) {
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public int getBreadth() {
+        return breadth;
+    }
+}
+
 public class ps09 {
     public static void main(String[] args) {
          // Problem 1
@@ -43,10 +66,14 @@ public class ps09 {
         //myCylinder.setRadius(9);
         System.out.println(myCylinder.getRadius());
 
-
         // Problem 2
         System.out.println(myCylinder.surfaceArea());
         System.out.println(myCylinder.volume());
+
+        // Problem 3
+        Rectangle r = new Rectangle(12, 56);
+        System.out.println(r.getLength());
+        System.out.println(r.getBreadth());
     }
 }
 
