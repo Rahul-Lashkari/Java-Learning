@@ -54,5 +54,16 @@ public class ch11ps {
         // Q3
         Human harry = new Human();
         harry.sleep();
+
+        // Q5
+        Monkey m1 = new Human();
+        m1.jump();
+        m1.bite();
+        // m1.speak(); --> Cannot use speak method because the reference is monkey which does not have speak method
+
+        BasicAnimal lovish = new Human();
+        // lovish.speak(); --> error
+        lovish.eat();
+        lovish.sleep();
     }
 }
