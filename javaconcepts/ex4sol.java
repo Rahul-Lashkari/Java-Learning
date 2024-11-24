@@ -11,7 +11,7 @@ public class ex4sol {
             reversed.append(words[i]).append(" ");
         }
         System.out.println("Reversed Sentence: " + reversed.toString().trim());
-*/
+
         // Problem 2
         int[] arr = {12, 35, 1, 10, 34, 1};
         int largest = Integer.MIN_VALUE;
@@ -26,5 +26,20 @@ public class ex4sol {
             }
         }
         System.out.println("Second Largest: " + secondLargest);
+ */
+        // Problem 3
+        int num = 28;
+        int sum = 0;
+
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+        if (sum == num) {
+            System.out.println(num + " is a Perfect Number.");
+        } else {
+            System.out.println(num + " is not a Perfect Number.");
+        }
     }
 }
