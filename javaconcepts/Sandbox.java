@@ -147,7 +147,14 @@ public class Sandbox {
         }
         System.out.println(sum);
 -----
+        float [] marks = {22.0f, 20.0f, 20.0f, 20.0f, 20.0f};
+        float sum = 0;
+        for(float element:marks){
+            sum = sum + element;
+        }
+        System.out.println("The value of sum is: " + sum);
+-----
 */
-        
+     
     }
 }
