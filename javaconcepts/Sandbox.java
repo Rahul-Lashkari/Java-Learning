@@ -130,8 +130,24 @@ public class Sandbox {
             System.out.printf("%d X %d = %d\n", n, i, n*i);
         }
 ----
+
+        int n = 5;
+        int i = 1;
+        int factorial = 1;
+        while(i<=n){
+            factorial *=i;
+            i++;
+        }
+        System.out.println(factorial);
+-----
+        int n = 8;
+        int sum = 0;
+        for(int i=0; i<10; i++){
+            sum += n*i;
+        }
+        System.out.println(sum);
+-----
 */
         
-
     }
 }
