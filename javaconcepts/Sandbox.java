@@ -155,6 +155,24 @@ public class Sandbox {
         System.out.println("The value of sum is: " + sum);
 -----
 */
-     
+        float [] marks = {20.2f, 20.2f,20.2f,20.2f,42.0f};
+        float num = 42.0f;
+        boolean isInArray = false;
+        for(float element:marks){
+            if(num==element){
+                isInArray = true;
+                break;
+            }
+        }
+        if(isInArray){
+            System.out.println("The value is present in the array");
+        }
+        else{
+            System.out.println("It isn't");
+        }
+
+
+
+
     }
 }
