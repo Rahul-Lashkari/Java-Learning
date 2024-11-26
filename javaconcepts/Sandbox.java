@@ -154,7 +154,6 @@ public class Sandbox {
         }
         System.out.println("The value of sum is: " + sum);
 -----
-*/
         float [] marks = {20.2f, 20.2f,20.2f,20.2f,42.0f};
         float num = 42.0f;
         boolean isInArray = false;
@@ -171,6 +170,14 @@ public class Sandbox {
             System.out.println("It isn't");
         }
 
+        float [] marks = {20.2f, 20.2f,20.2f,20.2f,42.0f};
+        float sum = 0;
+        for(float element:marks){
+            sum = sum + element;
+        }
+        System.out.println("The value of avg marks is: " + sum/marks.length);
+-----
+*/
 
 
 
