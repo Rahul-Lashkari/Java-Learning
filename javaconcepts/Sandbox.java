@@ -198,8 +198,7 @@ public class Sandbox {
             }
             System.out.println("");
         }
------
-*/
+------------------------------------------------------------------------------------------------------------
         // Reverse an array~~
         int [] arr = {1,2,3,4,5,6};
         int l = arr.length;
@@ -216,6 +215,17 @@ public class Sandbox {
             System.out.print(element + " ");
         }
 
+------------------------------------------------------------------------------------------------------------
+*/
+        // Find the max. element in an array~~
+        int [] arr = {1, 2, 3, 4, 500, 999};
+        int max = Integer.MIN_VALUE;
+        for(int e: arr){
+            if(e>max){
+                max = e;
+            }
+        }
+        System.out.println("The value of the maximum element in this array is: " + max);
 
     }
 }
