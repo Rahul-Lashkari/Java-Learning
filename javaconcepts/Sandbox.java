@@ -227,14 +227,28 @@ public class Sandbox {
         System.out.println("The value of the maximum element in this array is: " + max);
 
 ------------------------------------------------------------------------------------------------------------
- */
         // Q7~
         System.out.println(Integer.MIN_VALUE);
         System.out.println(Integer.MAX_VALUE);
 
-
-
-
+------------------------------------------------------------------------------------------------------------
+        // Find whether an array is sorted or not~~
+        boolean isSorted = true;
+        int [] arr = {1, 2, 13, 4, 5, 6, 70};
+        for(int i=0; i<arr.length-1; i++){
+            if(arr[i] > arr[i+1]){
+                isSorted = false;
+                break;
+            }
+        }
+        if(isSorted){
+            System.out.println("The Array is sorted");
+        }
+        else{
+            System.out.println("The Array is not sorted");
+        }
+------------------------------------------------------------------------------------------------------------
+*/
 
     }
 }
