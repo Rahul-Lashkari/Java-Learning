@@ -216,7 +216,6 @@ public class Sandbox {
         }
 
 ------------------------------------------------------------------------------------------------------------
-*/
         // Find the max. element in an array~~
         int [] arr = {1, 2, 3, 4, 500, 999};
         int max = Integer.MIN_VALUE;
@@ -226,6 +225,16 @@ public class Sandbox {
             }
         }
         System.out.println("The value of the maximum element in this array is: " + max);
+
+------------------------------------------------------------------------------------------------------------
+ */
+        // Q7~
+        System.out.println(Integer.MIN_VALUE);
+        System.out.println(Integer.MAX_VALUE);
+
+
+
+
 
     }
 }
