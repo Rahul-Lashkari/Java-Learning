@@ -4,10 +4,18 @@ import java.util.Scanner;
 
 public class Sandbox {
 
-
     static void multiplication(int n){
         for(int i=0;i<=10;i++){
             System.out.format("%d x %d = %d\n", n, i, n*i);
+        }
+    }
+
+    static void pattern1(int n){
+        for(int i=0; i<n; i++){
+            for(int j=0; j<i+1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 
@@ -258,8 +266,17 @@ public class Sandbox {
             System.out.println("The Array is not sorted");
         }
 ------------------------------------------------------------------------------------------------------------
-*/
         // multiplication using method~~
         multiplication(4);
+
+------------------------------------------------------------------------------------------------------------
+ */
+        pattern1(4);
+
+
+
+
+
+
     }
 }
