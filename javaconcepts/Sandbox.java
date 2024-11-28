@@ -27,6 +27,14 @@ public class Sandbox {
         return n + sumRec(n-1);
     }
 
+    static int fib(int n){
+        if(n==1 || n==2){
+            return n-1;
+        } else{
+            return fib(n-1) + fib(n-2);
+        }
+    }
+
 
 
     public static void main(String[] args) {
@@ -281,12 +289,17 @@ public class Sandbox {
         // printing a pattern~~
         pattern1(4);
 
- ------------------------------------------------------------------------------------------------------------
- */
+------------------------------------------------------------------------------------------------------------
         // sum of 1st n natural numbers using recursive function~~
         int c = sumRec(4);
         System.out.println(c);
 
+------------------------------------------------------------------------------------------------------------
+ */
+        // print nth term of fibonacchi series~~
+        // fibonacci series - 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+        int result = fib(9);
+        System.out.println(result);
 
 
 
