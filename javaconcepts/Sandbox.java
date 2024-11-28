@@ -3,6 +3,16 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Sandbox {
+
+
+    static void multiplication(int n){
+        for(int i=0;i<=10;i++){
+            System.out.format("%d x %d = %d\n", n, i, n*i);
+        }
+    }
+
+
+
     public static void main(String[] args) {
 
         // Revisions & Repeated Practices are done in Sandbox! ~~~~
@@ -249,6 +259,7 @@ public class Sandbox {
         }
 ------------------------------------------------------------------------------------------------------------
 */
-
+        // multiplication using method~~
+        multiplication(4);
     }
 }
