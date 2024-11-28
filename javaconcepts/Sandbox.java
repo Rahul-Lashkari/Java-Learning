@@ -35,6 +35,16 @@ public class Sandbox {
         }
     }
 
+    static void pattern1_rec(int n){
+        if(n>0){
+            pattern1_rec(n-1);
+            for(int i=0; i<n; i++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
 
 
     public static void main(String[] args) {
@@ -295,11 +305,15 @@ public class Sandbox {
         System.out.println(c);
 
 ------------------------------------------------------------------------------------------------------------
- */
         // print nth term of fibonacchi series~~
         // fibonacci series - 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
         int result = fib(9);
         System.out.println(result);
+
+------------------------------------------------------------------------------------------------------------
+ */
+        // printing a pattern using recursive func~~
+        pattern1_rec(8);
 
 
 
