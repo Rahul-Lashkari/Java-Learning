@@ -19,6 +19,14 @@ public class Sandbox {
         }
     }
 
+    static int sumRec(int n){
+        //Base condition
+        if(n==1){
+            return 1;
+        }
+        return n + sumRec(n-1);
+    }
+
 
 
     public static void main(String[] args) {
@@ -270,10 +278,14 @@ public class Sandbox {
         multiplication(4);
 
 ------------------------------------------------------------------------------------------------------------
- */
+        // printing a pattern~~
         pattern1(4);
 
-
+ ------------------------------------------------------------------------------------------------------------
+ */
+        // sum of 1st n natural numbers using recursive function~~
+        int c = sumRec(4);
+        System.out.println(c);
 
 
 
