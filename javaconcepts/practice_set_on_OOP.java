@@ -15,7 +15,7 @@ class Employee4 {
     }
 }
 
-class CellPhone{
+class CellPhone4 {
     public void ring(){
         System.out.println("Ringing...");
     }
@@ -60,7 +60,7 @@ public class practice_set_on_OOP {
         System.out.println(Joe.getName());
 
         // Problem 2
-        CellPhone asus = new CellPhone();
+        CellPhone4 asus = new CellPhone4();
         asus.callFriend();
         asus.vibrate();
         asus.ring();

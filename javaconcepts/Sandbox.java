@@ -15,6 +15,18 @@ class Employee{
     }
 }
 
+class CellPhone{
+    public void ring(){
+        System.out.println("Ringing...");
+    }
+    public void vibrate(){
+        System.out.println("Vibrating...");
+    }
+    public void callFriend(){
+        System.out.println("Calling Stacy");
+    }
+}
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -329,13 +341,19 @@ public class Sandbox {
         // printing a pattern using recursive func~~
         pattern1_rec(8);
 ------------------------------------------------------------------------------------------------------------
- */
         // Class Emp with adequate properties & methods~~
         Employee4 Joe = new Employee4();
         Joe.setName("Joe Cullen");
         Joe.salary = 250;
         System.out.println(Joe.getName());
         System.out.println(Joe.getSalary());
+------------------------------------------------------------------------------------------------------------
+ */
+        // Class CellPh with adequate methods~~
+        CellPhone asus = new CellPhone();
+        asus.callFriend();
+        asus.vibrate();
+        asus.ring();
 
     }
 }
