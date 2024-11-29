@@ -1,6 +1,19 @@
 package javaconcepts;
-import java.util.Random;
-import java.util.Scanner;
+
+class Employee{
+    int salary;
+    String name;
+
+    public int getSalary(){
+        return salary;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String n){
+        name = n;
+    }
+}
 
 public class Sandbox {
 
@@ -44,6 +57,8 @@ public class Sandbox {
             System.out.println();
         }
     }
+
+
 
 
 
@@ -311,11 +326,16 @@ public class Sandbox {
         System.out.println(result);
 
 ------------------------------------------------------------------------------------------------------------
- */
         // printing a pattern using recursive func~~
         pattern1_rec(8);
-
-
+------------------------------------------------------------------------------------------------------------
+ */
+        // Class Emp with adequate properties & methods~~
+        Employee4 Joe = new Employee4();
+        Joe.setName("Joe Cullen");
+        Joe.salary = 250;
+        System.out.println(Joe.getName());
+        System.out.println(Joe.getSalary());
 
     }
 }

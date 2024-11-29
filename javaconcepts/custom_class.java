@@ -17,8 +17,8 @@ class Employee1{
 public class custom_class {
     public static void main(String[] args) {
         System.out.println("This is our custom class");
-        Employee1 Sasha = new Employee1();   // Instantiating a new Employee Object
-        Employee1 Nicole = new Employee1();  // Instantiating a new Employee Object
+        Employee1 Sasha = new Employee1();   // Instantiating a new Employee4 Object
+        Employee1 Nicole = new Employee1();  // Instantiating a new Employee4 Object
 
         // Setting Attributes for Sasha
         Sasha.id = 11;
