@@ -37,7 +37,7 @@ class Square4 {
     }
 }
 
-class Tommy{
+class Tommy4 {
     public void hit(){
         System.out.println("Hitting the enemy");
     }
@@ -72,7 +72,7 @@ public class practice_set_on_OOP {
         System.out.println(sq.perimeter());
 */
         // Problem 4
-        Tommy player1 = new Tommy();
+        Tommy4 player1 = new Tommy4();
         player1.fire();
         player1.run();
         player1.hit();

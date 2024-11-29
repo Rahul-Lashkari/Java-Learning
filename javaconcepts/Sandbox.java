@@ -37,6 +37,18 @@ class square{
     }
 }
 
+class Tommy{
+    public void hit(){
+        System.out.println("Hitting the enemy");
+    }
+    public void run(){
+        System.out.println("Running from the enemy");
+    }
+    public void fire(){
+        System.out.println("Firing on the enemy");
+    }
+}
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -364,11 +376,17 @@ public class Sandbox {
         asus.vibrate();
         asus.ring();
 ------------------------------------------------------------------------------------------------------------
- */
         // Class square with adequate methods~~
         square sq = new square();
         sq.side = 3;
         System.out.println(sq.area());
         System.out.println(sq.perimeter());
+------------------------------------------------------------------------------------------------------------
+ */
+        // Class TommyVercetti for Rockstar Games with adequate methods~~
+        Tommy player1 = new Tommy();
+        player1.fire();
+        player1.run();
+        player1.hit();
     }
 }
