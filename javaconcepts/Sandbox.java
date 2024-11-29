@@ -27,6 +27,16 @@ class CellPhone{
     }
 }
 
+class square{
+    int side;
+    public int area(){
+        return side*side;
+    }
+    public int perimeter(){
+        return 4*side;
+    }
+}
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -348,12 +358,17 @@ public class Sandbox {
         System.out.println(Joe.getName());
         System.out.println(Joe.getSalary());
 ------------------------------------------------------------------------------------------------------------
- */
         // Class CellPh with adequate methods~~
         CellPhone asus = new CellPhone();
         asus.callFriend();
         asus.vibrate();
         asus.ring();
-
+------------------------------------------------------------------------------------------------------------
+ */
+        // Class square with adequate methods~~
+        square sq = new square();
+        sq.side = 3;
+        System.out.println(sq.area());
+        System.out.println(sq.perimeter());
     }
 }

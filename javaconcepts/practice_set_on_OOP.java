@@ -27,7 +27,7 @@ class CellPhone4 {
     }
 }
 
-class Square{
+class Square4 {
     int side;
     public int area(){
         return side*side;
@@ -66,7 +66,7 @@ public class practice_set_on_OOP {
         asus.ring();
 
         // Problem 3
-        Square sq = new Square();
+        Square4 sq = new Square4();
         sq.side = 3;
         System.out.println(sq.area());
         System.out.println(sq.perimeter());
