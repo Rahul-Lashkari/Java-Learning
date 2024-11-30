@@ -3,7 +3,7 @@ package javaconcepts;
 import java.util.Random;
 import java.util.Scanner;
 
-class Game{
+class Game1 {
     public int number;
     public int inputNumber;
     public int noOfGuesses = 0;
@@ -16,7 +16,7 @@ class Game{
         this.noOfGuesses = noOfGuesses;
     }
 
-    Game(){
+    Game1(){
         Random rand = new Random();
         this.number = rand.nextInt(100);
     }
@@ -45,8 +45,8 @@ class Game{
 public class Guess_the_number {
     public static void main(String[] args) {
         /*
-            Create a class Game, which allows a user to play "Guess the Number"
-            game once. Game should have the following methods:
+            Create a class Game1, which allows a user to play "Guess the Number"
+            game once. Game1 should have the following methods:
             1. Constructor to generate the random number
             2. takeUserInput() to take a user input of number
             3. isCorrectNumber() to detect whether the number entered by the user is true
@@ -54,7 +54,7 @@ public class Guess_the_number {
             Use properties such as noOfGuesses(int), etc to get this task done!
          */
 
-        Game g = new Game();
+        Game1 g = new Game1();
         boolean b= false;
         while(!b){
             g.takeUserInput();
