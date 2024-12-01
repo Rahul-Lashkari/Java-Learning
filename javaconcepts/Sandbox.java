@@ -128,6 +128,29 @@ class Cylinder{
     }
 }
 
+class Rectangle2{
+    public int length;
+    public int breadth;
+
+    public Rectangle2(){
+        this.length = 4;
+        this.breadth = 5;
+    }
+
+    public Rectangle2(int length, int breadth){
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    public int getLength(){
+        return length;
+    }
+
+    public int getBreadth(){
+        return breadth;
+    }
+}
+
 
 public class Sandbox {
 
@@ -508,7 +531,6 @@ public class Sandbox {
             b = g.isCorrectNumber();
         }
 ------------------------------------------------------------------------------------------------------------
- */
         // Class Cylinder with adequate getters & setters~~
         Cylinder myCylinder = new Cylinder(9, 12);
         //myCylinder4.setHeight(12);
@@ -519,6 +541,11 @@ public class Sandbox {
         // Surface Area & Vol~~
         System.out.println(myCylinder.surfaceArea());
         System.out.println(myCylinder.volume());
-
+------------------------------------------------------------------------------------------------------------
+*/
+        // Class Rectangle with adequate getters & setters~~
+        Rectangle2 r = new Rectangle2(12, 56);
+        System.out.println(r.getLength());
+        System.out.println(r.getBreadth());
     }
 }
