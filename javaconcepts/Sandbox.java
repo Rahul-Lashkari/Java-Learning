@@ -1,6 +1,7 @@
 package javaconcepts;
 import java.util.Scanner;
 import java.util.Random;
+import javax.print.Doc;
 
 //----------------------------------------------------------------------------------------------
     // Revisions & Repeated Practices are done in Sandbox! ~~~~
@@ -178,6 +179,25 @@ class ChildofDerived2 extends Derived2{
     ChildofDerived2(int x, int y, int z){
         super(x, y);
         System.out.println("I'm an overloaded constructor of Derived with value of z as: " + z);
+    }
+}
+
+class oneClass{
+    int a;
+    public int getA(){
+        return a;
+    }
+    oneClass(int a){
+        this.a = a;
+    }
+    public int returnone(){
+        return 1;
+    }
+}
+class twoClass extends oneClass {
+    twoClass(int c) {
+        super(c);
+        System.out.println("I'm a constructor");
     }
 }
 
@@ -577,12 +597,17 @@ public class Sandbox {
         System.out.println(r.getLength());
         System.out.println(r.getBreadth());
 ------------------------------------------------------------------------------------------------------------
- */
         // Constructors in Inheritance~~
         // Base1 b = new Base1();
         // Derived1 d = new Derived1();
         // Derived1 d = new Derived1(14, 9);
         // ChildOfDerived cd = new ChildOfDerived();
         ChildOfDerived cd = new ChildOfDerived(12, 13, 15);
+------------------------------------------------------------------------------------------------------------
+ */
+        // this and super keyword~~
+        oneClass e = new oneClass(66);
+        twoClass d = new twoClass(5);
+        System.out.println(e.getA());
     }
 }
