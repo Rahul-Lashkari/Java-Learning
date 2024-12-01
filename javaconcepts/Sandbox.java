@@ -151,6 +151,36 @@ class Rectangle2{
     }
 }
 
+class Base2{
+    Base2(){
+        System.out.println("I am a constructor");
+    }
+    Base2(int x){
+        System.out.println("I'm an overloaded constructor with value of x as: " + x);
+    }
+}
+
+class Derived2 extends Base2{
+    Derived2(){
+        //super(0);
+        System.out.println("I'm a derived class constructor");
+    }
+    Derived2(int x, int y){
+        super(x);
+        System.out.println("I'm an overloaded constructor of Derived with value of y as: " + y);
+    }
+}
+
+class ChildofDerived2 extends Derived2{
+    ChildofDerived2(){
+        System.out.println("I'm a child of derived constructor");
+    }
+    ChildofDerived2(int x, int y, int z){
+        super(x, y);
+        System.out.println("I'm an overloaded constructor of Derived with value of z as: " + z);
+    }
+}
+
 
 public class Sandbox {
 
@@ -542,10 +572,17 @@ public class Sandbox {
         System.out.println(myCylinder.surfaceArea());
         System.out.println(myCylinder.volume());
 ------------------------------------------------------------------------------------------------------------
-*/
         // Class Rectangle with adequate getters & setters~~
         Rectangle2 r = new Rectangle2(12, 56);
         System.out.println(r.getLength());
         System.out.println(r.getBreadth());
+------------------------------------------------------------------------------------------------------------
+ */
+        // Constructors in Inheritance~~
+        // Base1 b = new Base1();
+        // Derived1 d = new Derived1();
+        // Derived1 d = new Derived1(14, 9);
+        // ChildOfDerived cd = new ChildOfDerived();
+        ChildOfDerived cd = new ChildOfDerived(12, 13, 15);
     }
 }
