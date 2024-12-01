@@ -1,7 +1,11 @@
 package javaconcepts;
-
 import java.util.Scanner;
 import java.util.Random;
+
+//----------------------------------------------------------------------------------------------
+    // Revisions & Repeated Practices are done in Sandbox! ~~~~
+    // I Try to do a fast Recap on the weekends just to brush up the concepts😞😙..
+//----------------------------------------------------------------------------------------------
 
 class Employee{
     int salary;
@@ -511,5 +515,10 @@ public class Sandbox {
         System.out.println(myCylinder.getHeight());
         //myCylinder4.setRadius(9);
         System.out.println(myCylinder.getRadius());
+
+        // Surface Area & Vol~~
+        System.out.println(myCylinder.surfaceArea());
+        System.out.println(myCylinder.volume());
+
     }
 }
