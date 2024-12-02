@@ -239,6 +239,34 @@ class SmartPhone1 extends Phone1{
     }
 }
 
+class Circle1{
+    public int radius;
+    Circle1(){
+        System.out.println("I am non param of circle1");
+    }
+    Circle1(int r){
+        System.out.println("I am circle1 parameterized constructor");
+        this.radius = r;
+    }
+
+    public double area(){
+        return Math.PI*this.radius*this.radius;
+    }
+}
+
+class Cylinder2 extends Circle1{
+    public int height;
+    Cylinder2(int r, int h){
+        super(r);
+        System.out.println("I am cylinder2 parameterized constructor");
+        this.height = h;
+    }
+    public double volume(){
+        return Math.PI*this.radius*this.radius*this.height;
+    }
+}
+
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -651,7 +679,6 @@ public class Sandbox {
         B1 b = new B1();
         b.meth2();
 ------------------------------------------------------------------------------------------------------------
- */
         // Dynamic Method Dispatch~~
         // Phone1 obj = new Phone1(); // Allowed
         // SmartPhone1 smobj = new SmartPhone1(); // Allowed
@@ -662,6 +689,10 @@ public class Sandbox {
         obj.showTime();
         obj.on();
         // obj.music(); Not Allowed
-
+------------------------------------------------------------------------------------------------------------
+ */
+        // Practice Questions on Inheritance~~
+        // Circle1 objc = new Circle1(12);
+        Cylinder2 obj = new Cylinder2(12,4);
     }
 }
