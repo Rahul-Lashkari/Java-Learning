@@ -266,6 +266,34 @@ class Cylinder2 extends Circle1{
     }
 }
 
+abstract class Parent3{
+    public Parent3(){
+        System.out.println("Mai Parent3 ka constructor hoon");
+    }
+    public void sayHello(){
+        System.out.println("Hello");
+    }
+    abstract public void greet();
+    abstract public void greet2();
+}
+
+class Child4 extends Parent3{
+    @Override
+    public void greet(){
+        System.out.println("Good Morning");
+    }
+    @Override
+    public void greet2(){
+        System.out.println("Good Afternoon");
+    }
+}
+
+abstract class Child5 extends Parent3{
+    public void test(){
+        System.out.println("This is a test");
+    }
+}
+
 
 public class Sandbox {
 
@@ -690,9 +718,14 @@ public class Sandbox {
         obj.on();
         // obj.music(); Not Allowed
 ------------------------------------------------------------------------------------------------------------
- */
         // Practice Questions on Inheritance~~
         // Circle1 objc = new Circle1(12);
         Cylinder2 obj = new Cylinder2(12,4);
+------------------------------------------------------------------------------------------------------------
+*/
+        // Abstract Class & Abstract Methods revision~~
+        // Parent3 p = new Parent3(); --error
+        Child4 d = new Child4();
+        // Child5 c5 = new Child5(); --error
     }
 }
