@@ -201,6 +201,25 @@ class twoClass extends oneClass {
     }
 }
 
+class A1{
+    public int a;
+    public int rahul(){
+        return 5;
+    }
+    public void meth2(){
+        System.out.println("I'm a method 2 of class A1");
+    }
+}
+
+class B1 extends A1{
+    @Override
+    public void meth2(){
+        System.out.println("I'm method 2 of class B1");
+    }
+    public void meth3(){
+        System.out.println("I'm method 3 of class B1");
+    }
+}
 
 public class Sandbox {
 
@@ -604,10 +623,18 @@ public class Sandbox {
         // ChildOfDerived cd = new ChildOfDerived();
         ChildOfDerived cd = new ChildOfDerived(12, 13, 15);
 ------------------------------------------------------------------------------------------------------------
- */
         // this and super keyword~~
         oneClass e = new oneClass(66);
         twoClass d = new twoClass(5);
         System.out.println(e.getA());
+------------------------------------------------------------------------------------------------------------
+ */
+        // Method Overriding~~
+        A1 a = new A1();
+        a.meth2();
+
+        B1 b = new B1();
+        b.meth2();
+
     }
 }
