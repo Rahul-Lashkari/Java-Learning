@@ -221,6 +221,24 @@ class B1 extends A1{
     }
 }
 
+class Phone1{
+    public void showTime(){
+        System.out.println("Time is 8 pm");
+    }
+    public void on(){
+        System.out.println("Turning on phone...");
+    }
+}
+
+class SmartPhone1 extends Phone1{
+    public void music(){
+        System.out.println("Playing Music...");
+    }
+    public void on(){
+        System.out.println("Turning on SmartPhone...");
+    }
+}
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -265,9 +283,6 @@ public class Sandbox {
     }
 
 
-
-
-
     public static void main(String[] args) {
 
         // Revisions & Repeated Practices are done in Sandbox! ~~~~
@@ -281,18 +296,18 @@ public class Sandbox {
         String name = "Rahul Lashkari";
         name = name.replace(" ", "_");
         System.out.println(name);
---
+------------------------------------------------------------------------------------------------------------
         String letter = "Dear <|name|>, Thanks a lot!";
         letter = letter.replace("<|name|>", "Sachin");
         System.out.println(letter);
---
+------------------------------------------------------------------------------------------------------------
         String mystring = "This string contains double and  triple spaces";
         System.out.println(mystring.indexOf("  "));
         System.out.println(mystring.indexOf("   "));
---
+------------------------------------------------------------------------------------------------------------
         String myLetter = "Dear Harry,\n\tThis Java Course is Nice.\nThanks!";
         System.out.println(myLetter);
---
+------------------------------------------------------------------------------------------------------------
         byte m1, m2, m3;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your phy marks");
@@ -308,7 +323,7 @@ public class Sandbox {
         else{
             System.out.println("Sorry");
         }
---
+------------------------------------------------------------------------------------------------------------
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter ur income in lakhs per annum");
         float tax = 0;
@@ -330,7 +345,7 @@ public class Sandbox {
         }
 
         System.out.println("The total tax paid by the employee is: " + tax);
---
+------------------------------------------------------------------------------------------------------------
         Scanner sc = new Scanner(System.in);
         int day = sc.nextInt();
 
@@ -343,12 +358,12 @@ public class Sandbox {
             case 6 -> System.out.println("sat");
             case 7 -> System.out.println("sun");
         }
---
+------------------------------------------------------------------------------------------------------------
 
         Random r = new Random();
         int a = r.nextInt();
         System.out.println(a);
---
+------------------------------------------------------------------------------------------------------------
 
         Scanner sc = new Scanner(System.in);
         String website = sc.next();
@@ -362,7 +377,7 @@ public class Sandbox {
             System.out.println("It is indian site..");
         }
 
---
+------------------------------------------------------------------------------------------------------------
  */
 
         // Chapter 6-10 revision :-
@@ -374,7 +389,7 @@ public class Sandbox {
             }
             System.out.print("\n");
         }
------
+------------------------------------------------------------------------------------------------------------
         int sum = 0;
         int n=4;
         for(int i=0;i<n; i++){
@@ -382,19 +397,19 @@ public class Sandbox {
         }
         System.out.print("Sum of even numbers is: ");
         System.out.println(sum);
------
+------------------------------------------------------------------------------------------------------------
         int n=2;
         int x=10;
         for(int i=1;i<=x;i++){
             System.out.printf("%d X %d = %d\n", n, i, n*i);
         }
------
+------------------------------------------------------------------------------------------------------------
         int n=2;
         int x=0;
         for(int i=10;i>=x;i--){
             System.out.printf("%d X %d = %d\n", n, i, n*i);
         }
-----
+------------------------------------------------------------------------------------------------------------
 
         int n = 5;
         int i = 1;
@@ -404,21 +419,21 @@ public class Sandbox {
             i++;
         }
         System.out.println(factorial);
------
+------------------------------------------------------------------------------------------------------------
         int n = 8;
         int sum = 0;
         for(int i=0; i<10; i++){
             sum += n*i;
         }
         System.out.println(sum);
------
+------------------------------------------------------------------------------------------------------------
         float [] marks = {22.0f, 20.0f, 20.0f, 20.0f, 20.0f};
         float sum = 0;
         for(float element:marks){
             sum = sum + element;
         }
         System.out.println("The value of sum is: " + sum);
------
+------------------------------------------------------------------------------------------------------------
         float [] marks = {20.2f, 20.2f,20.2f,20.2f,42.0f};
         float num = 42.0f;
         boolean isInArray = false;
@@ -441,6 +456,7 @@ public class Sandbox {
             sum = sum + element;
         }
         System.out.println("The value of avg marks is: " + sum/marks.length);
+------------------------------------------------------------------------------------------------------------
 
         int [][] mat1 = {{1,2,3},
                          {4,5,6}};
@@ -628,13 +644,24 @@ public class Sandbox {
         twoClass d = new twoClass(5);
         System.out.println(e.getA());
 ------------------------------------------------------------------------------------------------------------
- */
         // Method Overriding~~
         A1 a = new A1();
         a.meth2();
 
         B1 b = new B1();
         b.meth2();
+------------------------------------------------------------------------------------------------------------
+ */
+        // Dynamic Method Dispatch~~
+        // Phone1 obj = new Phone1(); // Allowed
+        // SmartPhone1 smobj = new SmartPhone1(); // Allowed
+
+        Phone1 obj = new SmartPhone1(); // Yes, it's allowed
+        // SmartPhone1 obj2 = new Phone1(); // Not Allowed
+
+        obj.showTime();
+        obj.on();
+        // obj.music(); Not Allowed
 
     }
 }
