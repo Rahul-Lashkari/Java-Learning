@@ -325,6 +325,23 @@ class AvonCycle2 implements Bicycle2, HornBicycle2{
     }
 }
 
+interface Vehicle {
+    void start();
+    void stop();
+}
+
+class Car implements Vehicle {
+    @Override
+    public void start() {
+        System.out.println("Car is starting...");
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Car has stopped.");
+    }
+}
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -757,7 +774,6 @@ public class Sandbox {
         Child4 d = new Child4();
         // Child5 c5 = new Child5(); --error
 ------------------------------------------------------------------------------------------------------------
- */
         // Interfaces revision~~
         AvonCycle2 cycleShreya = new AvonCycle2();
         cycleShreya.applyBrake(1);
@@ -771,5 +787,11 @@ public class Sandbox {
 
         cycleShreya.blowHornk3g();
         cycleShreya.blowHornmhn();
+------------------------------------------------------------------------------------------------------------
+ */
+        // Interfaces revision prob 2~~
+        Car myCar = new Car();
+        myCar.start();
+        myCar.stop();
     }
 }
