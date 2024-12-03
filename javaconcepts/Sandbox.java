@@ -357,6 +357,26 @@ class Dog implements Animal {
     }
 }
 
+interface Flyable {
+    void fly();
+}
+
+interface Swimmable {
+    void swim();
+}
+
+class Duck implements Flyable, Swimmable {
+    @Override
+    public void fly() {
+        System.out.println("Duck is flying...");
+    }
+
+    @Override
+    public void swim() {
+        System.out.println("Duck is swimming...");
+    }
+}
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -808,11 +828,16 @@ public class Sandbox {
         myCar.start();
         myCar.stop();
 ------------------------------------------------------------------------------------------------------------
- */
         // Interfaces revision prob 3~~
         Dog myDog = new Dog();
         myDog.speak();
         myDog.sleep(); // Calls the default method
+------------------------------------------------------------------------------------------------------------
+ */
+        // Interfaces revision prob 4~~
+        Duck duck = new Duck();
+        duck.fly();
+        duck.swim();
 
     }
 }
