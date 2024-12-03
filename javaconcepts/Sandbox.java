@@ -342,6 +342,21 @@ class Car implements Vehicle {
     }
 }
 
+interface Animal {
+    void speak();
+
+    default void sleep() {
+        System.out.println("The animal is sleeping...");
+    }
+}
+
+class Dog implements Animal {
+    @Override
+    public void speak() {
+        System.out.println("Woof! Woof!");
+    }
+}
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -788,10 +803,16 @@ public class Sandbox {
         cycleShreya.blowHornk3g();
         cycleShreya.blowHornmhn();
 ------------------------------------------------------------------------------------------------------------
- */
         // Interfaces revision prob 2~~
         Car myCar = new Car();
         myCar.start();
         myCar.stop();
+------------------------------------------------------------------------------------------------------------
+ */
+        // Interfaces revision prob 3~~
+        Dog myDog = new Dog();
+        myDog.speak();
+        myDog.sleep(); // Calls the default method
+
     }
 }
