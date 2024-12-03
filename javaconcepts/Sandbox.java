@@ -294,6 +294,36 @@ abstract class Child5 extends Parent3{
     }
 }
 
+interface Bicycle2{
+    int a = 45;
+    void applyBrake(int decrement);
+    void speedUp(int increment);
+}
+
+interface HornBicycle2{
+    int x = 45;
+    void blowHornk3g();
+    void blowHornmhn();
+}
+
+class AvonCycle2 implements Bicycle2, HornBicycle2{
+    //public int x = 5;
+    void blowHorn2(){
+        System.out.println("Pee Pee Poo Poo");
+    }
+    public void applyBrake(int decrement){
+        System.out.println("Applying Brake");
+    }
+    public void speedUp(int increment){
+        System.out.println("Applying SpeedUp");
+    }
+    public void blowHornk3g(){
+        System.out.println("Kabhi khushi kabhi gum pee pee pee pee");
+    }
+    public void blowHornmhn(){
+        System.out.println("Main hoon naa po po");
+    }
+}
 
 public class Sandbox {
 
@@ -722,10 +752,24 @@ public class Sandbox {
         // Circle1 objc = new Circle1(12);
         Cylinder2 obj = new Cylinder2(12,4);
 ------------------------------------------------------------------------------------------------------------
-*/
         // Abstract Class & Abstract Methods revision~~
         // Parent3 p = new Parent3(); --error
         Child4 d = new Child4();
         // Child5 c5 = new Child5(); --error
+------------------------------------------------------------------------------------------------------------
+ */
+        // Interfaces revision~~
+        AvonCycle2 cycleShreya = new AvonCycle2();
+        cycleShreya.applyBrake(1);
+        // You can create properties in Interfaces
+        System.out.println(cycleShreya.a);
+        System.out.println(cycleShreya.x);
+
+        // You cannot modify the properties in Interfaces as they are final
+        // cycle.Shreya.a = 454;
+        // System.out.println(cycleShreya.a);
+
+        cycleShreya.blowHornk3g();
+        cycleShreya.blowHornmhn();
     }
 }
