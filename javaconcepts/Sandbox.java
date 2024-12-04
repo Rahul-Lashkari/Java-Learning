@@ -436,6 +436,35 @@ class Circle2 implements Drawable, Colorable {
     }
 }
 
+interface Addition {
+    int add(int a, int b);
+}
+
+interface Subtraction {
+    int subtract(int a, int b);
+}
+
+interface Multiplication {
+    int multiply(int a, int b);
+}
+
+class Calculator2 implements Addition, Subtraction, Multiplication {
+    @Override
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    @Override
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    @Override
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
 
 public class Sandbox {
 
@@ -909,10 +938,16 @@ public class Sandbox {
         myCar.fuelType();
         myCar.charge();
 ------------------------------------------------------------------------------------------------------------
- */
         // Abstract Classes Vs Interfaces revision prob 3~~
         Circle2 myCircle = new Circle2();
         myCircle.draw();
         myCircle.fillColor("Blue");
+------------------------------------------------------------------------------------------------------------
+ */
+        // Abstract Classes Vs Interfaces revision prob 4~~
+        Calculator2 calc = new Calculator2();
+        System.out.println("Addition: " + calc.add(10, 5));
+        System.out.println("Subtraction: " + calc.subtract(10, 5));
+        System.out.println("Multiplication: " + calc.multiply(10, 5));
     }
 }
