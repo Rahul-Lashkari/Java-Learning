@@ -416,6 +416,27 @@ class Tesla extends Vehicle6 implements Electric {
     }
 }
 
+interface Drawable {
+    void draw();
+}
+
+interface Colorable {
+    void fillColor(String color);
+}
+
+class Circle2 implements Drawable, Colorable {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle.");
+    }
+
+    @Override
+    public void fillColor(String color) {
+        System.out.println("Filling the circle with color: " + color);
+    }
+}
+
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -882,12 +903,16 @@ public class Sandbox {
         System.out.println("Sum: " + calc.add(10, 20));
         System.out.println("Product: " + calc.multiply(10, 20));
 ------------------------------------------------------------------------------------------------------------
- */
         // Abstract Classes Vs Interfaces revision prob 2~~
         Tesla myCar = new Tesla();
         myCar.displayInfo();
         myCar.fuelType();
         myCar.charge();
-
+------------------------------------------------------------------------------------------------------------
+ */
+        // Abstract Classes Vs Interfaces revision prob 3~~
+        Circle2 myCircle = new Circle2();
+        myCircle.draw();
+        myCircle.fillColor("Blue");
     }
 }
