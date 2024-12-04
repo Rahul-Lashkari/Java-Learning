@@ -377,6 +377,23 @@ class Duck implements Flyable, Swimmable {
     }
 }
 
+interface Calculator {
+    int add(int a, int b);
+
+    // Default method
+    default int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
+class BasicCalculator implements Calculator {
+    @Override
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -833,11 +850,16 @@ public class Sandbox {
         myDog.speak();
         myDog.sleep(); // Calls the default method
 ------------------------------------------------------------------------------------------------------------
- */
         // Interfaces revision prob 4~~
         Duck duck = new Duck();
         duck.fly();
         duck.swim();
+------------------------------------------------------------------------------------------------------------
+ */
+        // Abstract Classes Vs Interfaces revision~~
+        Calculator calc = new BasicCalculator();
+        System.out.println("Sum: " + calc.add(10, 20));
+        System.out.println("Product: " + calc.multiply(10, 20));
 
     }
 }
