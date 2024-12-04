@@ -1,7 +1,6 @@
 package javaconcepts;
 import java.util.Scanner;
 import java.util.Random;
-import javax.print.Doc;
 
 //----------------------------------------------------------------------------------------------
     // Revisions & Repeated Practices are done in Sandbox! ~~~~
@@ -393,6 +392,29 @@ class BasicCalculator implements Calculator {
     }
 }
 
+abstract class Vehicle6 {
+    abstract void fuelType();
+
+    void displayInfo() {
+        System.out.println("This is a vehicle.");
+    }
+}
+
+interface Electric {
+    void charge();
+}
+
+class Tesla extends Vehicle6 implements Electric {
+    @Override
+    void fuelType() {
+        System.out.println("This vehicle runs on electricity.");
+    }
+
+    @Override
+    public void charge() {
+        System.out.println("Charging the Tesla...");
+    }
+}
 
 public class Sandbox {
 
@@ -855,11 +877,17 @@ public class Sandbox {
         duck.fly();
         duck.swim();
 ------------------------------------------------------------------------------------------------------------
- */
         // Abstract Classes Vs Interfaces revision~~
         Calculator calc = new BasicCalculator();
         System.out.println("Sum: " + calc.add(10, 20));
         System.out.println("Product: " + calc.multiply(10, 20));
+------------------------------------------------------------------------------------------------------------
+ */
+        // Abstract Classes Vs Interfaces revision prob 2~~
+        Tesla myCar = new Tesla();
+        myCar.displayInfo();
+        myCar.fuelType();
+        myCar.charge();
 
     }
 }
