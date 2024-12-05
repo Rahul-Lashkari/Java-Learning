@@ -1,5 +1,4 @@
 package javaconcepts;
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.Scanner;
 import java.util.Random;
@@ -490,6 +489,54 @@ class MySampleClass1 implements javaconcepts.childSampleInterface1{
     }
 }
 
+interface MyCamera3{
+    void takesnap();
+    void recordVideo();
+    private void greet(){
+        System.out.println("Good Morning");
+    }
+    default void record4kVideo(){
+        greet();
+        System.out.println("Recording in 4k...");
+    }
+}
+
+interface MyWifi3{
+    String[] getNetworks();
+    void connectToNetwork(String network);
+}
+
+class MyCellPhone3{
+    void callNumber(int phoneNumber){
+        System.out.println("Calling " + phoneNumber);
+    }
+    void pickCall(){
+        System.out.println("Connecting...");
+    }
+}
+
+class MySmartPhone3 extends MyCellPhone3 implements  MyWifi3, MyCamera3{
+    public void takesnap(){
+        System.out.println("Taking Snap");
+    }
+    public void recordVideo(){
+        System.out.println("Taking Snap");
+    }
+//    public void record4kVideo(){
+//        System.out.println("Taking snap and recoding in 4k");
+//    }
+    public String[] getNetworks(){
+        System.out.println("Getting List of Networks");
+        String[] networkList = {"Rahul", "Harry", "Aaditya"};
+        return networkList;
+    }
+    public void connectToNetwork(String network){
+        System.out.println("Connecting to " + network);
+    }
+    public void sampleMeth(){
+        System.out.println("meth");
+    }
+}
 
 public class Sandbox {
 
@@ -974,12 +1021,23 @@ public class Sandbox {
         System.out.println("Subtraction: " + calc.subtract(10, 5));
         System.out.println("Multiplication: " + calc.multiply(10, 5));
 ------------------------------------------------------------------------------------------------------------
- */
         // Inheritance in Interfaces revision~~
         MySampleClass1 obj = new MySampleClass1();
         obj.meth1();
         obj.meth2();
         obj.meth3();
+------------------------------------------------------------------------------------------------------------
+ */
+        // Polymorphism in Interfaces revision~~
+        MyCamera3 cam2 = new MySmartPhone3(); // This is a smartphone but, use it as a camera
+        // cam2.getNetworks(); --> Not allowed
+        // cam2.sampleMeth(); --> Not allowed
+        cam2.takesnap();
 
+        MySmartPhone3 s = new MySmartPhone3();
+        s.sampleMeth();
+        s.recordVideo();
+        s.getNetworks();
+        s.callNumber(222444777);
     }
 }
