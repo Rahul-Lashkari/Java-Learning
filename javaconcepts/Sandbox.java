@@ -1,4 +1,6 @@
 package javaconcepts;
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -462,6 +464,29 @@ class Calculator2 implements Addition, Subtraction, Multiplication {
     @Override
     public int multiply(int a, int b) {
         return a * b;
+    }
+}
+
+interface sampleInterface1{
+    void meth1();
+    void meth2();
+}
+interface childSampleInterface1 extends javaconcepts.sampleInterface1{
+    void meth3();
+    void meth4();
+}
+class MySampleClass1 implements javaconcepts.childSampleInterface1{
+    public void meth1(){
+        System.out.println("meth1");
+    }
+    public void meth2(){
+        System.out.println("meth2");
+    }
+    public void meth3(){
+        System.out.println("meth3");
+    }
+    public void meth4(){
+        System.out.println("meth4");
     }
 }
 
@@ -943,11 +968,18 @@ public class Sandbox {
         myCircle.draw();
         myCircle.fillColor("Blue");
 ------------------------------------------------------------------------------------------------------------
- */
         // Abstract Classes Vs Interfaces revision prob 4~~
         Calculator2 calc = new Calculator2();
         System.out.println("Addition: " + calc.add(10, 5));
         System.out.println("Subtraction: " + calc.subtract(10, 5));
         System.out.println("Multiplication: " + calc.multiply(10, 5));
+------------------------------------------------------------------------------------------------------------
+ */
+        // Inheritance in Interfaces revision~~
+        MySampleClass1 obj = new MySampleClass1();
+        obj.meth1();
+        obj.meth2();
+        obj.meth3();
+
     }
 }
