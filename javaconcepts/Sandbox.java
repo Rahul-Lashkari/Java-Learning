@@ -538,6 +538,23 @@ class MySmartPhone3 extends MyCellPhone3 implements  MyWifi3, MyCamera3{
     }
 }
 
+abstract class Pen1{
+    abstract void write();
+    abstract void refill();
+}
+
+class FountainPen1 extends Pen1{
+    void write(){
+        System.out.println("Write");
+    }
+    void refill(){
+        System.out.println("Refill");
+    }
+    void changeNib(){
+        System.out.println("Changing the nib");
+    }
+}
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -1027,7 +1044,6 @@ public class Sandbox {
         obj.meth2();
         obj.meth3();
 ------------------------------------------------------------------------------------------------------------
- */
         // Polymorphism in Interfaces revision~~
         MyCamera3 cam2 = new MySmartPhone3(); // This is a smartphone but, use it as a camera
         // cam2.getNetworks(); --> Not allowed
@@ -1039,5 +1055,10 @@ public class Sandbox {
         s.recordVideo();
         s.getNetworks();
         s.callNumber(222444777);
+------------------------------------------------------------------------------------------------------------
+ */
+        // Abstract Classes & Interfaces Practice set revision~~
+        FountainPen1 pen = new FountainPen1();
+        pen.changeNib();
     }
 }
