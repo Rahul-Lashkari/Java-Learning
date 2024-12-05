@@ -555,6 +555,36 @@ class FountainPen1 extends Pen1{
     }
 }
 
+class Monkey1{
+    void jump(){
+        System.out.println("Jumping...");
+    }
+    void bite(){
+        System.out.println("Biting...");
+    }
+}
+
+interface BasicAnimal1{
+    void eat();
+    void sleep();
+}
+
+class Human2 extends Monkey1 implements BasicAnimal1{
+    void speak(){
+        System.out.println("Hello sir!");
+        }
+
+    @Override
+    public void eat() {
+        System.out.println("Eating");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Sleeping");
+    }
+}
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -1056,9 +1086,13 @@ public class Sandbox {
         s.getNetworks();
         s.callNumber(222444777);
 ------------------------------------------------------------------------------------------------------------
- */
-        // Abstract Classes & Interfaces Practice set revision~~
+        // Abstract Classes & Interfaces Practice set revision prob 1 & 2~~
         FountainPen1 pen = new FountainPen1();
         pen.changeNib();
+------------------------------------------------------------------------------------------------------------
+ */
+        // Abstract Classes & Interfaces Practice set revision prob 3~~
+        Human2 shreya = new Human2();
+        shreya.sleep();
     }
 }
