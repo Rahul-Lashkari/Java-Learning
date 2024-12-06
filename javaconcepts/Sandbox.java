@@ -663,6 +663,53 @@ class SavingsAccount extends BankAccount {
     }
 }
 
+interface Appliance {
+    void turnOn();
+    void turnOff();
+}
+
+interface Adjustable {
+    void increaseSetting();
+    void decreaseSetting();
+}
+
+class Fan implements Appliance, Adjustable {
+    private int speed;
+
+    @Override
+    public void turnOn() {
+        System.out.println("Fan is now ON.");
+        speed = 1;
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("Fan is now OFF.");
+        speed = 0;
+    }
+
+    @Override
+    public void increaseSetting() {
+        if (speed < 5) {
+            speed++;
+            System.out.println("Fan speed increased to: " + speed);
+        } else {
+            System.out.println("Fan is already at maximum speed!");
+        }
+    }
+
+    @Override
+    public void decreaseSetting() {
+        if (speed > 0) {
+            speed--;
+            System.out.println("Fan speed decreased to: " + speed);
+        } else {
+            System.out.println("Fan is already at minimum speed!");
+        }
+    }
+}
+
+
 public class Sandbox {
 
     static void multiplication(int n){
@@ -1201,13 +1248,20 @@ public class Sandbox {
         myLibrary.returnBook("Java");
         myLibrary.showAvailableBooks();
 ------------------------------------------------------------------------------------------------------------
- */
         // Abstract Classes & Interfaces Practice set revision prob 5~~
         SavingsAccount myAccount = new SavingsAccount(12345, 1000.0, 2.5);
         myAccount.checkBalance();
         myAccount.deposit(500.0);
         myAccount.withdraw(200.0);
         myAccount.checkBalance();
-        
+------------------------------------------------------------------------------------------------------------
+ */
+        // Abstract Classes & Interfaces Practice set revision prob 6~~
+        Fan myFan = new Fan();
+        myFan.turnOn();
+        myFan.increaseSetting();
+        myFan.increaseSetting();
+        myFan.decreaseSetting();
+        myFan.turnOff();
     }
 }
