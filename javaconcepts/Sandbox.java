@@ -1090,9 +1090,20 @@ public class Sandbox {
         FountainPen1 pen = new FountainPen1();
         pen.changeNib();
 ------------------------------------------------------------------------------------------------------------
- */
         // Abstract Classes & Interfaces Practice set revision prob 3~~
         Human2 shreya = new Human2();
         shreya.sleep();
+------------------------------------------------------------------------------------------------------------
+ */
+        // Abstract Classes & Interfaces Practice set revision prob 4~~
+        Monkey1 m1 = new Human2();
+        m1.jump();
+        m1.bite();
+        // m1.speak(); --> Cannot use speak method because the reference is monkey which does not have speak method
+
+        BasicAnimal1 lovish = new Human2();
+        lovish.eat();
+        // lovish.speak(); --> error
+        lovish.sleep();
     }
 }
