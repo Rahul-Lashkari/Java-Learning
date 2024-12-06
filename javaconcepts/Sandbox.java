@@ -619,7 +619,48 @@ class Library1{
     void returnBook(String book){
         addBook(book);
     }
+}
 
+abstract class BankAccount {
+    int accountNumber;
+    double balance;
+
+    BankAccount(int accountNumber, double balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+
+    abstract void deposit(double amount);
+    abstract void withdraw(double amount);
+
+    void checkBalance() {
+        System.out.println("Account " + accountNumber + " has balance: " + balance);
+    }
+}
+
+class SavingsAccount extends BankAccount {
+    double interestRate;
+
+    SavingsAccount(int accountNumber, double balance, double interestRate) {
+        super(accountNumber, balance);
+        this.interestRate = interestRate;
+    }
+
+    @Override
+    void deposit(double amount) {
+        balance += amount;
+        System.out.println("Deposited " + amount + " into Savings Account.");
+    }
+
+    @Override
+    void withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+            System.out.println("Withdrew " + amount + " from Savings Account.");
+        } else {
+            System.out.println("Insufficient balance!");
+        }
+    }
 }
 
 public class Sandbox {
@@ -1142,7 +1183,6 @@ public class Sandbox {
         // lovish.speak(); --> error
         lovish.sleep();
 ------------------------------------------------------------------------------------------------------------
- */
         // Implemented a program for a Library along with many adequate features!~~~~~
 
         // You have to implement a library using Java Class "Library"
@@ -1160,6 +1200,14 @@ public class Sandbox {
         myLibrary.showAvailableBooks();
         myLibrary.returnBook("Java");
         myLibrary.showAvailableBooks();
-
+------------------------------------------------------------------------------------------------------------
+ */
+        // Abstract Classes & Interfaces Practice set revision prob 5~~
+        SavingsAccount myAccount = new SavingsAccount(12345, 1000.0, 2.5);
+        myAccount.checkBalance();
+        myAccount.deposit(500.0);
+        myAccount.withdraw(200.0);
+        myAccount.checkBalance();
+        
     }
 }
