@@ -30,6 +30,11 @@ public class ps15 {
         Calendar c = Calendar.getInstance();
         System.out.println(c.get(Calendar.HOUR_OF_DAY) + ":" + c.get(Calendar.MINUTE) + ":" + c.get(Calendar.SECOND));
 
+        // PS Q4 - Repeat question number 2 using java.time API.
+        LocalDateTime dt = LocalDateTime.now(); // This is the date
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("H:m:s"); // This is the format
+        String myDate = dt.format(df); // Creating date string using date and format
+        System.out.println(myDate);
 
         // PS Q5 - Create a Set in java. Try to store the duplicate values elements inside this set and verify that only one instance is stored.
         HashSet<Integer> s = new HashSet();
