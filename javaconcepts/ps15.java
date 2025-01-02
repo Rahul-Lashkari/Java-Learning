@@ -26,6 +26,11 @@ public class ps15 {
         Date d = new Date();
         System.out.println(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
 
+        // PS Q3 - Repeat question number 2 using the Calendar class.
+        Calendar c = Calendar.getInstance();
+        System.out.println(c.get(Calendar.HOUR_OF_DAY) + ":" + c.get(Calendar.MINUTE) + ":" + c.get(Calendar.SECOND));
+
+
         // PS Q5 - Create a Set in java. Try to store the duplicate values elements inside this set and verify that only one instance is stored.
         HashSet<Integer> s = new HashSet();
         s.add(5);
