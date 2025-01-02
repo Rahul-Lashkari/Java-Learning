@@ -1,6 +1,7 @@
 package javaconcepts;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class ps15 {
     public static void main(String[] args) {
@@ -19,5 +20,15 @@ public class ps15 {
         for(Object o: ar){
             System.out.println(o);
         }
+
+        // PS Q5 - Create a Set in java. Try to store the duplicate values elements inside this set and verify that only one instance is stored.
+        HashSet<Integer> s = new HashSet();
+        s.add(5);
+        s.add(6);
+        s.add(46);
+        s.add(60);
+        s.add(9);
+        s.add(6);
+        System.out.println(s);
     }
 }
