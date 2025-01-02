@@ -1,7 +1,8 @@
 package javaconcepts;
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 public class ps15 {
     public static void main(String[] args) {
@@ -20,6 +21,10 @@ public class ps15 {
         for(Object o: ar){
             System.out.println(o);
         }
+
+        // PS Q2 - Use the Date class in Java to print the time in the following format : 21:47:02.
+        Date d = new Date();
+        System.out.println(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
 
         // PS Q5 - Create a Set in java. Try to store the duplicate values elements inside this set and verify that only one instance is stored.
         HashSet<Integer> s = new HashSet();
